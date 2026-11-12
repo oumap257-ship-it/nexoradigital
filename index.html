@@ -1,0 +1,816 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#080b12">
+<meta name="description" content="Nexora Digital by Peter Ouma. Professional website development, branding and digital solutions for growing businesses in Kenya.">
+<title>Nexora Digital | Innovate. Create. Elevate.</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --bg:#080b12;
+  --surface:#101622;
+  --surface2:#151e2d;
+  --gold:#e8b84c;
+  --gold2:#ffd779;
+  --white:#f7f8fc;
+  --muted:#a4afc0;
+  --border:rgba(255,255,255,.09);
+  --green:#25d366;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  background:var(--bg);
+  color:var(--white);
+  font-family:'DM Sans',sans-serif;
+  line-height:1.7;
+  overflow-x:hidden;
+}
+a{text-decoration:none;color:inherit}
+img{max-width:100%;display:block}
+button{font:inherit;cursor:pointer}
+.container{width:min(1140px,90%);margin:auto}
+.gold{color:var(--gold)}
+.section{padding:100px 0}
+.section-heading{text-align:center;margin-bottom:48px}
+.section-heading span{
+  color:var(--gold);
+  font-size:.8rem;
+  letter-spacing:3px;
+  font-weight:800;
+  text-transform:uppercase;
+}
+.section-heading h2{
+  font:700 clamp(2rem,4vw,3rem) 'Outfit',sans-serif;
+  margin:12px 0;
+}
+.section-heading p{color:var(--muted);max-width:650px;margin:auto}
+.btn{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap:9px;
+  padding:13px 22px;
+  border-radius:8px;
+  font-weight:800;
+  transition:.3s;
+  border:1px solid transparent;
+}
+.btn-primary{
+  color:#111;
+  background:linear-gradient(135deg,var(--gold2),var(--gold));
+}
+.btn-primary:hover{transform:translateY(-3px);box-shadow:0 8px 25px #e8b84c33}
+.btn-outline{border-color:#ffffff35;color:white}
+.btn-outline:hover{border-color:var(--gold);color:var(--gold)}
+/* NAVIGATION */
+header{
+  position:fixed;top:0;left:0;width:100%;z-index:1000;
+  background:rgba(8,11,18,.9);
+  backdrop-filter:blur(16px);
+  border-bottom:1px solid var(--border);
+}
+nav{height:76px;display:flex;align-items:center;justify-content:space-between}
+.logo{font:800 1.35rem 'Outfit',sans-serif;letter-spacing:-1px}
+.logo b{color:var(--gold)}
+.nav-links{display:flex;align-items:center;gap:27px}
+.nav-links a{font-size:.9rem;color:#d2d7e0;transition:.2s}
+.nav-links a:hover{color:var(--gold)}
+.menu-toggle{display:none;background:none;border:0;color:white;font-size:27px}
+/* HERO */
+.hero{
+  min-height:760px;
+  display:flex;
+  align-items:center;
+  padding:140px 0 80px;
+  position:relative;
+  background:
+  radial-gradient(ellipse at 75% 35%,#c18a281b,transparent 45%),
+  radial-gradient(ellipse at 10% 80%,#1c46752b,transparent 45%);
+}
+.hero-grid{
+  display:grid;
+  grid-template-columns:1.15fr .85fr;
+  align-items:center;
+  gap:60px;
+}
+.eyebrow{
+  color:var(--gold);
+  font-size:.83rem;
+  font-weight:800;
+  letter-spacing:3px;
+  text-transform:uppercase;
+  margin-bottom:20px;
+}
+.hero h1{
+  font:800 clamp(2.8rem,6vw,5.1rem)/1.07 'Outfit',sans-serif;
+  letter-spacing:-2.5px;
+  margin-bottom:25px;
+}
+.hero h1 span{
+  background:linear-gradient(90deg,var(--gold2),var(--gold));
+  -webkit-background-clip:text;
+  color:transparent;
+}
+.hero-description{
+  color:var(--muted);
+  max-width:570px;
+  font-size:1.06rem;
+  margin-bottom:30px;
+}
+.hero-buttons{display:flex;gap:13px;flex-wrap:wrap}
+.hero-stats{
+  display:flex;gap:35px;margin-top:48px;flex-wrap:wrap;
+}
+.stat strong{display:block;color:var(--gold);font:700 1.5rem 'Outfit'}
+.stat small{color:var(--muted);font-size:.78rem}
+.profile-wrap{position:relative;max-width:410px;margin:auto}
+.profile-frame{
+  padding:10px;border:1px solid #e8b84c70;
+  border-radius:24px;
+  background:linear-gradient(145deg,#e8b84c35,#151e2d);
+  position:relative;
+}
+.profile-frame img{
+  width:100%;height:490px;object-fit:cover;
+  object-position:center 25%;border-radius:17px;
+}
+.profile-label{
+  position:absolute;bottom:30px;left:-25px;
+  background:#111927;border:1px solid #e8b84c70;
+  border-radius:12px;padding:14px 20px;
+  box-shadow:0 12px 40px #0008;
+}
+.profile-label strong{display:block;color:var(--gold)}
+.profile-label small{color:var(--muted)}
+/* TRUST STRIP */
+.trust{border-block:1px solid var(--border);background:#0d121c;padding:24px 0}
+.trust-grid{display:flex;justify-content:space-around;gap:20px;flex-wrap:wrap}
+.trust-item{color:#c7cfdb;font-weight:700;font-size:.9rem}
+.trust-item span{color:var(--gold);margin-right:8px}
+/* SERVICES */
+.services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.service-card{
+  background:var(--surface);
+  border:1px solid var(--border);
+  padding:30px;border-radius:16px;
+  transition:.3s;
+}
+.service-card:hover{transform:translateY(-7px);border-color:#e8b84c70}
+.service-icon{
+  width:53px;height:53px;border-radius:13px;
+  display:grid;place-items:center;
+  background:#e8b84c17;color:var(--gold);
+  font-size:25px;margin-bottom:20px;
+}
+.service-card h3{font:700 1.2rem 'Outfit';margin-bottom:10px}
+.service-card p{font-size:.9rem;color:var(--muted)}
+/* ABOUT */
+.about{background:#0d121c}
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:65px;align-items:center}
+.about-visual{
+  min-height:350px;border:1px solid #e8b84c45;
+  border-radius:20px;padding:35px;
+  background:radial-gradient(circle at 30% 30%,#e8b84c20,transparent 60%),var(--surface);
+  display:flex;align-items:center;justify-content:center;
+}
+.about-mark{
+  font:800 clamp(5rem,12vw,9rem) 'Outfit';
+  color:var(--gold);letter-spacing:-12px;
+}
+.about-copy h2{font:700 clamp(2rem,4vw,3rem) 'Outfit';margin:12px 0 20px}
+.about-copy p{color:var(--muted);margin-bottom:17px}
+.about-points{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:25px}
+.about-points div{color:#dce2eb;font-size:.9rem}
+.about-points span{color:var(--gold);margin-right:7px}
+/* PROCESS */
+.process-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:17px}
+.process-card{padding:25px;background:var(--surface);border:1px solid var(--border);border-radius:14px}
+.process-number{font:800 2rem 'Outfit';color:var(--gold);opacity:.8}
+.process-card h3{margin:8px 0;font:700 1.1rem 'Outfit'}
+.process-card p{color:var(--muted);font-size:.87rem}
+/* PORTFOLIO */
+.portfolio-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:22px}
+.project{
+  overflow:hidden;border-radius:17px;background:var(--surface);
+  border:1px solid var(--border);
+}
+.project-image{height:230px;overflow:hidden;background:#1a2638}
+.project-image img{width:100%;height:100%;object-fit:cover;transition:.5s}
+.project:hover img{transform:scale(1.06)}
+.project-info{padding:24px}
+.project-info h3{font:700 1.25rem 'Outfit';margin-bottom:7px}
+.project-info p{color:var(--muted);font-size:.9rem;margin-bottom:14px}
+.project-tag{font-size:.75rem;color:var(--gold);font-weight:800;letter-spacing:1px}
+/* PRICING */
+.pricing{background:#0d121c}
+.pricing-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;align-items:stretch}
+.price-card{
+  background:var(--surface);border:1px solid var(--border);
+  border-radius:17px;padding:30px;position:relative;
+}
+.price-card.featured{border:1px solid var(--gold);box-shadow:0 0 35px #e8b84c15}
+.recommended{
+  display:inline-block;background:var(--gold);color:#111;
+  font-size:.7rem;font-weight:900;padding:5px 12px;border-radius:30px;
+  margin-bottom:15px;
+}
+.price-card h3{font:700 1.3rem 'Outfit'}
+.price{font:800 2.5rem 'Outfit';color:var(--gold);margin:12px 0}
+.price small{font:400 .8rem 'DM Sans';color:var(--muted)}
+.price-card>p{color:var(--muted);font-size:.85rem;min-height:48px}
+.price-card ul{list-style:none;margin:22px 0}
+.price-card li{padding:7px 0;color:#d5dbe5;font-size:.88rem;border-bottom:1px solid #ffffff0b}
+.price-card li:before{content:"✓";color:var(--gold);font-weight:900;margin-right:10px}
+.price-card .btn{width:100%}
+/* FAQ */
+.faq-list{max-width:800px;margin:auto}
+details{background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:18px 20px;margin-bottom:12px}
+summary{cursor:pointer;font-weight:700}
+details p{color:var(--muted);font-size:.9rem;margin-top:12px}
+/* CONTACT */
+.contact{background:radial-gradient(ellipse at 50% 100%,#c18a281b,transparent 60%)}
+.contact-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:40px}
+.contact-details{display:grid;gap:18px}
+.contact-item{padding:19px;background:var(--surface);border:1px solid var(--border);border-radius:12px}
+.contact-item strong{display:block;color:var(--gold);margin-bottom:4px}
+.contact-item p,.contact-item a{color:var(--muted);font-size:.9rem}
+.contact-form{
+  padding:30px;background:var(--surface);border:1px solid var(--border);border-radius:16px;
+}
+.contact-form h3{font:700 1.5rem 'Outfit';margin-bottom:20px}
+.form-group{margin-bottom:15px}
+.form-group label{display:block;font-size:.83rem;margin-bottom:7px;color:#d7deea}
+.form-group input,.form-group textarea,.form-group select{
+  width:100%;padding:13px;background:#080d16;
+  color:white;border:1px solid var(--border);border-radius:8px;
+  font:inherit;outline:none;
+}
+.form-group input:focus,.form-group textarea:focus{border-color:var(--gold)}
+.form-group textarea{min-height:120px;resize:vertical}
+/* FOOTER */
+footer{background:#06080d;border-top:1px solid var(--border);padding:35px 0}
+.footer-content{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;align-items:center}
+.footer-content p{color:var(--muted);font-size:.83rem}
+.footer-links{display:flex;gap:20px;font-size:.85rem;color:var(--muted)}
+.footer-links a:hover{color:var(--gold)}
+/* WHATSAPP */
+.whatsapp{
+  position:fixed;right:22px;bottom:22px;z-index:900;
+  width:58px;height:58px;border-radius:50%;
+  background:var(--green);color:white;
+  display:grid;place-items:center;font-size:27px;
+  box-shadow:0 8px 25px #0008;
+  transition:.3s;
+}
+.whatsapp:hover{transform:scale(1.1)}
+/* RESPONSIVE */
+@media(max-width:900px){
+  .hero-grid,.about-grid,.contact-grid{grid-template-columns:1fr}
+  .hero{text-align:center}
+  .hero-description{margin-inline:auto}
+  .hero-buttons,.hero-stats{justify-content:center}
+  .profile-wrap{max-width:340px}
+  .services-grid,.pricing-grid{grid-template-columns:repeat(2,1fr)}
+  .process-grid{grid-template-columns:repeat(2,1fr)}
+}
+@media(max-width:650px){
+  .section{padding:72px 0}
+  .menu-toggle{display:block}
+  .nav-links{
+    display:none;position:absolute;top:76px;left:0;width:100%;
+    background:#0b101a;padding:25px 5%;
+    flex-direction:column;align-items:flex-start;
+    border-bottom:1px solid var(--border);
+  }
+  .nav-links.active{display:flex}
+  .hero{min-height:auto;padding:125px 0 65px}
+  .hero h1{letter-spacing:-1.5px}
+  .profile-frame img{height:390px}
+  .services-grid,.pricing-grid,.portfolio-grid{grid-template-columns:1fr}
+  .process-grid{grid-template-columns:1fr 1fr}
+  .about-points{grid-template-columns:1fr}
+  .profile-label{left:-8px}
+  .footer-content{flex-direction:column;text-align:center}
+  .footer-links{flex-wrap:wrap;justify-content:center}
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="container">
+    <nav>
+      <a href="#home" class="logo">NEXORA <b>DIGITAL.</b></a>
+      <button class="menu-toggle" id="menuToggle" aria-label="Open menu">☰</button>
+      <div class="nav-links" id="navLinks">
+        <a href="#home">Home</a>
+        <a href="#services">Services</a>
+        <a href="#about">About</a>
+        <a href="#portfolio">Portfolio</a>
+        <a href="#pricing">Packages</a>
+        <a href="#contact" class="btn btn-primary">Let's Talk ↗</a>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<main>
+<!-- HERO -->
+<section class="hero" id="home">
+  <div class="container hero-grid">
+    <div>
+      <div class="eyebrow">Innovate • Create • Elevate</div>
+      <h1>Building Digital<br>Experiences That <span>Grow Businesses.</span></h1>
+      <p class="hero-description">
+        Welcome to Nexora Digital. I help businesses establish a professional
+        online presence through modern websites, creative branding and practical
+        digital solutions.
+      </p>
+      <div class="hero-buttons">
+        <a href="#portfolio" class="btn btn-primary">Explore My Work ↗</a>
+        <a href="#contact" class="btn btn-outline">Start a Project</a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat"><strong>3</strong><small>Website Packages</small></div>
+        <div class="stat"><strong>100%</strong><small>Personal Attention</small></div>
+        <div class="stat"><strong>Kenya</strong><small>Based in Kakamega</small></div>
+      </div>
+    </div>
+
+    <div class="profile-wrap">
+      <div class="profile-frame">
+        <!-- Save your uploaded portrait as profile.jpg beside this HTML file -->
+        <img src="profile.jpg" alt="Peter Ouma, founder of Nexora Digital"
+             onerror="this.src='https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=800'">
+      </div>
+      <div class="profile-label">
+        <strong>Peter Ouma</strong>
+        <small>Founder & Digital Developer</small>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="trust">
+  <div class="container trust-grid">
+    <div class="trust-item"><span>✦</span> Modern Web Design</div>
+    <div class="trust-item"><span>✦</span> Mobile-Friendly Websites</div>
+    <div class="trust-item"><span>✦</span> Creative Branding</div>
+    <div class="trust-item"><span>✦</span> Business-Focused Solutions</div>
+  </div>
+</div>
+
+<!-- SERVICES -->
+<section class="section" id="services">
+  <div class="container">
+    <div class="section-heading">
+      <span>What I Do</span>
+      <h2>Digital Solutions for <span class="gold">Growing Businesses</span></h2>
+      <p>Practical, creative and professional services designed to help your business stand out.</p>
+    </div>
+
+    <div class="services-grid">
+      <article class="service-card">
+        <div class="service-icon">⌘</div>
+        <h3>Website Development</h3>
+        <p>Modern, responsive websites for restaurants, shops, startups, professionals and other businesses.</p>
+      </article>
+      <article class="service-card">
+        <div class="service-icon">✧</div>
+        <h3>Graphic Design & Branding</h3>
+        <p>Professional logos, promotional posters, business cards and branded digital content.</p>
+      </article>
+      <article class="service-card">
+        <div class="service-icon">▣</div>
+        <h3>E-commerce Websites</h3>
+        <p>Product catalogues and online storefronts designed to showcase products and simplify customer enquiries.</p>
+      </article>
+      <article class="service-card">
+        <div class="service-icon">◎</div>
+        <h3>Digital Marketing</h3>
+        <p>Creative digital content and online presence support to help businesses reach their audiences.</p>
+      </article>
+      <article class="service-card">
+        <div class="service-icon">⌁</div>
+        <h3>Website Maintenance</h3>
+        <p>Website updates, troubleshooting and ongoing technical assistance under an agreed support plan.</p>
+      </article>
+      <article class="service-card">
+        <div class="service-icon">✎</div>
+        <h3>Custom Digital Projects</h3>
+        <p>Discuss your idea with me. We can explore a suitable website or digital solution for your needs.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="section about" id="about">
+  <div class="container about-grid">
+    <div class="about-visual">
+      <div class="about-mark">N.</div>
+    </div>
+    <div class="about-copy">
+      <div class="eyebrow">Meet the Developer</div>
+      <h2>Technology Meets <span class="gold">Creativity.</span></h2>
+      <p>
+        I'm Peter Ouma, founder of Nexora Digital, a digital solutions brand
+        focused on helping businesses build their online presence.
+      </p>
+      <p>
+        My approach is simple: understand your business, create a suitable
+        digital solution, and communicate clearly throughout the project.
+      </p>
+      <p>
+        Whether you're a restaurant looking for a website or a growing business
+        seeking a stronger brand identity, let's explore what we can build.
+      </p>
+      <div class="about-points">
+        <div><span>✓</span> Clear communication</div>
+        <div><span>✓</span> Responsive design</div>
+        <div><span>✓</span> Affordable packages</div>
+        <div><span>✓</span> Project-focused service</div>
+      </div>
+      <br>
+      <a href="#contact" class="btn btn-primary">Work With Me ↗</a>
+    </div>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section class="section">
+  <div class="container">
+    <div class="section-heading">
+      <span>How It Works</span>
+      <h2>From Idea to <span class="gold">Launch</span></h2>
+      <p>A straightforward process that keeps you involved at every stage.</p>
+    </div>
+    <div class="process-grid">
+      <div class="process-card">
+        <div class="process-number">01</div>
+        <h3>Discovery</h3>
+        <p>We discuss your business, goals, budget and website requirements.</p>
+      </div>
+      <div class="process-card">
+        <div class="process-number">02</div>
+        <h3>Planning & Design</h3>
+        <p>I prepare the design direction and agree on the project scope with you.</p>
+      </div>
+      <div class="process-card">
+        <div class="process-number">03</div>
+        <h3>Development</h3>
+        <p>Your website is developed, tested and presented for your feedback.</p>
+      </div>
+      <div class="process-card">
+        <div class="process-number">04</div>
+        <h3>Launch & Handover</h3>
+        <p>After approval and final payment, we arrange deployment and handover.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PORTFOLIO -->
+<section class="section" id="portfolio">
+  <div class="container">
+    <div class="section-heading">
+      <span>Selected Demonstrations</span>
+      <h2>Ideas Brought to <span class="gold">Life.</span></h2>
+      <p>Explore sample website concepts showing the design direction and digital experiences I can create for businesses.</p>
+    </div>
+
+    <div class="portfolio-grid">
+      <article class="project">
+        <div class="project-image">
+          <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=1000"
+               alt="Restaurant website concept" loading="lazy">
+        </div>
+        <div class="project-info">
+          <div class="project-tag">RESTAURANT WEBSITE CONCEPT</div>
+          <h3>Restaurant & Hospitality</h3>
+          <p>A modern restaurant website concept with menu presentation, food photography and customer contact options.</p>
+          <a href="#contact" class="gold">Request a similar website ↗</a>
+        </div>
+      </article>
+
+      <article class="project">
+        <div class="project-image">
+          <img src="https://images.unsplash.com/photo-1607082348824-0a96f2a4b9da?w=1000"
+               alt="Online store website concept" loading="lazy">
+        </div>
+        <div class="project-info">
+          <div class="project-tag">E-COMMERCE WEBSITE CONCEPT</div>
+          <h3>Online Store</h3>
+          <p>A product-focused storefront concept with attractive product displays and customer enquiry options.</p>
+          <a href="#contact" class="gold">Request a similar website ↗</a>
+        </div>
+      </article>
+
+      <article class="project">
+        <div class="project-image">
+          <img src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?w=1000"
+               alt="Corporate website concept" loading="lazy">
+        </div>
+        <div class="project-info">
+          <div class="project-tag">BUSINESS WEBSITE CONCEPT</div>
+          <h3>Corporate & Professional</h3>
+          <p>A clean digital presence for businesses that need to communicate their services and build credibility.</p>
+          <a href="#contact" class="gold">Request a similar website ↗</a>
+        </div>
+      </article>
+
+      <article class="project">
+        <div class="project-image">
+          <img src="https://images.unsplash.com/photo-1558655146-d09347e92766?w=1000"
+               alt="Brand design concept" loading="lazy">
+        </div>
+        <div class="project-info">
+          <div class="project-tag">CREATIVE DESIGN CONCEPT</div>
+          <h3>Branding & Graphic Design</h3>
+          <p>Visual concepts for businesses seeking consistent and memorable brand communication.</p>
+          <a href="#contact" class="gold">Discuss your brand ↗</a>
+        </div>
+      </article>
+    </div>
+    <p style="text-align:center;color:var(--muted);font-size:.8rem;margin-top:22px">
+      Note: These are illustrative portfolio concepts, not claims of completed client projects.
+    </p>
+  </div>
+</section>
+
+<!-- PRICING -->
+<section class="section pricing" id="pricing">
+  <div class="container">
+    <div class="section-heading">
+      <span>Transparent Pricing</span>
+      <h2>Choose Your <span class="gold">Website Package</span></h2>
+      <p>Affordable starting packages for businesses ready to establish their online presence.</p>
+    </div>
+
+    <div class="pricing-grid">
+      <article class="price-card">
+        <h3>Starter</h3>
+        <div class="price">KSh 2,000 <small>/ one-time</small></div>
+        <p>For small businesses looking for a simple online presence.</p>
+        <ul>
+          <li>One-page website</li>
+          <li>Business introduction</li>
+          <li>Products/services section</li>
+          <li>Contact details</li>
+          <li>WhatsApp button</li>
+          <li>Basic image gallery</li>
+          <li>Mobile-friendly design</li>
+        </ul>
+        <a class="btn btn-outline package-btn" data-package="Starter - KSh 2,000" href="#contact">Choose Starter</a>
+      </article>
+
+      <article class="price-card featured">
+        <div class="recommended">RECOMMENDED</div>
+        <h3>Professional</h3>
+        <div class="price">KSh 3,500 <small>/ one-time</small></div>
+        <p>For businesses wanting a more detailed and polished website.</p>
+        <ul>
+          <li>Everything in Starter</li>
+          <li>Enhanced custom design</li>
+          <li>Multiple website sections</li>
+          <li>Menu/product gallery</li>
+          <li>Google Maps integration</li>
+          <li>Social media links</li>
+          <li>WhatsApp ordering</li>
+          <li>Basic SEO setup</li>
+          <li>Enquiry form with submission service</li>
+        </ul>
+        <a class="btn btn-primary package-btn" data-package="Professional - KSh 3,500" href="#contact">Choose Professional</a>
+      </article>
+
+      <article class="price-card">
+        <h3>Premium</h3>
+        <div class="price">KSh 5,000 <small>/ starting price</small></div>
+        <p>For businesses requiring more customization and functionality.</p>
+        <ul>
+          <li>Everything in Professional</li>
+          <li>Premium visual design</li>
+          <li>Enhanced menu presentation</li>
+          <li>Basic content management functionality</li>
+          <li>Customer enquiry management</li>
+          <li>Advanced WhatsApp ordering</li>
+          <li>Basic analytics integration</li>
+          <li>Additional customization</li>
+          <li>Testing and handover</li>
+        </ul>
+        <a class="btn btn-outline package-btn" data-package="Premium - From KSh 5,000" href="#contact">Choose Premium</a>
+      </article>
+    </div>
+
+    <p style="color:var(--muted);font-size:.82rem;text-align:center;margin-top:25px">
+      Domain, hosting, third-party subscriptions, advanced backend systems and payment integrations are quoted separately where applicable. Exact features are confirmed in the project quotation.
+    </p>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="section">
+  <div class="container">
+    <div class="section-heading">
+      <span>Common Questions</span>
+      <h2>Frequently Asked <span class="gold">Questions</span></h2>
+    </div>
+    <div class="faq-list">
+      <details>
+        <summary>How much does a website cost?</summary>
+        <p>Website packages start at KSh 2,000. The final price depends on the agreed features, integrations and project requirements.</p>
+      </details>
+      <details>
+        <summary>Will my website work on mobile phones?</summary>
+        <p>Yes. The websites are designed to adapt to smartphones, tablets and desktop screens.</p>
+      </details>
+      <details>
+        <summary>How long does development take?</summary>
+        <p>Simple projects may take a few working days. The delivery timeline is agreed after reviewing the project requirements and receiving the necessary content.</p>
+      </details>
+      <details>
+        <summary>Can customers order through WhatsApp?</summary>
+        <p>Yes. WhatsApp buttons and prefilled enquiry or ordering messages can be included in suitable packages.</p>
+      </details>
+      <details>
+        <summary>Can you connect M-Pesa payments?</summary>
+        <p>Payment integration can be discussed as a separate feature. It depends on payment provider approval, account access, technical requirements and testing.</p>
+      </details>
+      <details>
+        <summary>Do you provide maintenance?</summary>
+        <p>Yes. Maintenance and technical support can be arranged under a separate agreement.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="section contact" id="contact">
+  <div class="container">
+    <div class="section-heading">
+      <span>Let's Work Together</span>
+      <h2>Have a Project in <span class="gold">Mind?</span></h2>
+      <p>Tell me what you're building. Let's discuss a suitable digital solution for your business.</p>
+    </div>
+
+    <div class="contact-grid">
+      <div class="contact-details">
+        <div class="contact-item">
+          <strong>✉ Email</strong>
+          <a href="mailto:nexoradigitalke45@gmail.com">nexoradigitalke45@gmail.com</a>
+        </div>
+        <div class="contact-item">
+          <strong>⌖ Location</strong>
+          <p>Kakamega, Kenya</p>
+        </div>
+        <div class="contact-item">
+          <strong>◷ Business Enquiries</strong>
+          <p>Contact me to discuss availability and project timelines.</p>
+        </div>
+        <div class="contact-item">
+          <strong>✦ Brand Promise</strong>
+          <p>Innovate • Create • Elevate</p>
+        </div>
+      </div>
+
+      <form class="contact-form" id="contactForm">
+        <h3>Send a Project Enquiry</h3>
+        <div class="form-group">
+          <label for="name">Your name</label>
+          <input id="name" name="name" placeholder="Enter your name" required>
+        </div>
+        <div class="form-group">
+          <label for="business">Business name</label>
+          <input id="business" name="business" placeholder="Your business or organization">
+        </div>
+        <div class="form-group">
+          <label for="service">Service required</label>
+          <select id="service" name="service" required>
+            <option value="">Select a service</option>
+            <option>Website Development</option>
+            <option>E-commerce Website</option>
+            <option>Graphic Design & Branding</option>
+            <option>Website Maintenance</option>
+            <option>Other Digital Project</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="message">Tell me about your project</label>
+          <textarea id="message" name="message" placeholder="Describe what you need..." required></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary" style="width:100%">
+          Send Enquiry via WhatsApp ↗
+        </button>
+      </form>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="container footer-content">
+    <div>
+      <a href="#home" class="logo">NEXORA <b>DIGITAL.</b></a>
+      <p>Innovate • Create • Elevate</p>
+    </div>
+    <div class="footer-links">
+      <a href="#services">Services</a>
+      <a href="#portfolio">Portfolio</a>
+      <a href="#pricing">Packages</a>
+      <a href="#contact">Contact</a>
+    </div>
+    <p>© <span id="year"></span> Nexora Digital. All rights reserved.</p>
+  </div>
+</footer>
+
+<a href="#" class="whatsapp" id="whatsappFloat" aria-label="Contact on WhatsApp">☏</a>
+
+<script>
+// ==========================================
+// NEXORA DIGITAL - PERSONALIZE THESE DETAILS
+// ==========================================
+
+// Replace with your actual WhatsApp number.
+// Use country code, without + or spaces. Example: 2547XXXXXXXX
+const WHATSAPP_NUMBER = "254790522994";
+
+const BUSINESS_NAME = "Nexora Digital";
+
+function openWhatsApp(message) {
+  if (WHATSAPP_NUMBER.includes("X")) 
+  const url = "https://wa.me/" + WHATSAPP_NUMBER +
+    "?text=" + encodeURIComponent(message);
+  window.open(url, "_blank");
+}
+
+// Mobile menu
+const menuToggle = document.getElementById("menuToggle");
+const navLinks = document.getElementById("navLinks");
+
+menuToggle.addEventListener("click", () => {
+  navLinks.classList.toggle("active");
+  menuToggle.textContent = navLinks.classList.contains("active") ? "✕" : "☰";
+});
+
+document.querySelectorAll(".nav-links a").forEach(link => {
+  link.addEventListener("click", () => {
+    navLinks.classList.remove("active");
+    menuToggle.textContent = "☰";
+  });
+});
+
+// Package selection
+document.querySelectorAll(".package-btn").forEach(button => {
+  button.addEventListener("click", () => {
+    const selected = button.dataset.package;
+    document.getElementById("service").value = "Website Development";
+    document.getElementById("message").value =
+      "I'm interested in the " + selected + " website package. Please share more information.";
+  });
+});
+
+// Contact form sends details to WhatsApp
+document.getElementById("contactForm").addEventListener("submit", function(e) {
+  e.preventDefault();
+
+  const name = document.getElementById("name").value.trim();
+  const business = document.getElementById("business").value.trim();
+  const service = document.getElementById("service").value;
+  const message = document.getElementById("message").value.trim();
+
+  if (!name || !service || !message) {
+    alert("Please complete the required fields.");
+    return;
+  }
+
+  const enquiry =
+    "Hello " + BUSINESS_NAME + ",\n\n" +
+    "I would like to make a project enquiry.\n\n" +
+    "Name: " + name + "\n" +
+    "Business: " + (business || "Not provided") + "\n" +
+    "Service: " + service + "\n" +
+    "Project details: " + message;
+
+  openWhatsApp(enquiry);
+});
+
+// Floating WhatsApp button
+document.getElementById("whatsappFloat").addEventListener("click", function(e) {
+  e.preventDefault();
+  openWhatsApp("Hello Nexora Digital! I'd like to enquire about your services.");
+});
+
+// Footer year
+document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
